@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+⠋ 正在连接 Hermes，会话准备中…
+
+─ 正在唤起 Hermes… │ ─ E:\AI\hermes\hermes-agent❯ 输入 /help 查看命令

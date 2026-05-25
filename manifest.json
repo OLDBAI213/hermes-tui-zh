@@ -1,0 +1,57 @@
+{
+  "name": "hermes-tui-zh",
+  "version": "0.3.0-local",
+  "description": "Hermes native TUI Chinese localization, P0 main flow, P1 high-frequency commands, and P2 low-frequency shell strings.",
+  "target": {
+    "project": "hermes-agent",
+    "path": "E:\\AI\\hermes\\hermes-agent",
+    "ui": "ui-tui"
+  },
+  "status": "p0-p1-p2-applied-locally",
+  "profiles": [
+    "p0",
+    "p1",
+    "p2"
+  ],
+  "modified_files": [
+    "ui-tui/src/content/zh.ts",
+    "ui-tui/src/domain/messages.ts",
+    "ui-tui/src/lib/text.ts",
+    "ui-tui/src/lib/subagentTree.ts",
+    "ui-tui/src/lib/terminalSetup.ts",
+    "ui-tui/src/lib/terminalParity.ts",
+    "ui-tui/src/content/fortunes.ts",
+    "ui-tui/src/content/charms.ts",
+    "ui-tui/src/content/verbs.ts",
+    "ui-tui/src/app/useSubmission.ts",
+    "ui-tui/src/app/useSessionLifecycle.ts",
+    "ui-tui/src/app/useConfigSync.ts",
+    "ui-tui/src/app/uiStore.ts",
+    "ui-tui/src/app/setupHandoff.ts",
+    "ui-tui/src/app/turnController.ts",
+    "ui-tui/src/app/useMainApp.ts",
+    "ui-tui/src/app/useInputHandlers.ts",
+    "ui-tui/src/app/createGatewayEventHandler.ts",
+    "ui-tui/src/app/createSlashHandler.ts",
+    "ui-tui/src/app/slash/commands/core.ts",
+    "ui-tui/src/app/slash/commands/ops.ts",
+    "ui-tui/src/app/slash/commands/session.ts",
+    "ui-tui/src/app/slash/commands/debug.ts",
+    "ui-tui/src/components/messageLine.tsx",
+    "ui-tui/src/components/appLayout.tsx",
+    "ui-tui/src/components/appOverlays.tsx",
+    "ui-tui/src/components/appChrome.tsx",
+    "ui-tui/src/components/todoPanel.tsx",
+    "ui-tui/src/components/agentsOverlay.tsx",
+    "ui-tui/src/components/modelPicker.tsx",
+    "ui-tui/src/components/thinking.tsx",
+    "ui-tui/src/__tests__/createGatewayEventHandler.test.ts",
+    "ui-tui/src/__tests__/createSlashHandler.test.ts",
+    "ui-tui/src/__tests__/text.test.ts",
+    "ui-tui/src/__tests__/useInputHandlers.test.ts",
+    "ui-tui/dist/entry.js"
+  ],
+  "verify": [
+    "pwsh -ExecutionPolicy Bypass -File .\\verify.ps1"
+  ]
+}
