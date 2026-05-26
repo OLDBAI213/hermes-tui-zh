@@ -1,0 +1,55 @@
+ M agent/conversation_loop.py
+ M gateway/platforms/feishu.py
+ M gateway/run.py
+ M gateway/sticker_cache.py
+ M hermes_state.py
+ M plugins/memory/holographic/holographic.py
+ M run_agent.py
+ M tests/gateway/test_feishu.py
+ M tests/gateway/test_feishu_zh_progress.py
+ M tests/gateway/test_reply_to_injection.py
+ M tests/gateway/test_session.py
+ M tests/gateway/test_sticker_cache.py
+ M tests/gateway/test_stt_config.py
+ M tests/gateway/test_telegram_audio_vs_voice.py
+ M tests/gateway/test_telegram_noise_filter.py
+ M tests/gateway/test_telegram_topic_mode.py
+ M tests/gateway/test_vision_memory_leak.py
+ M tests/run_agent/test_run_agent.py
+ M tests/test_tui_gateway_server.py
+ M tests/tui_gateway/test_protocol.py
+ M tui_gateway/server.py
+ M ui-tui/scripts/build.mjs
+ M ui-tui/src/__tests__/createGatewayEventHandler.test.ts
+ M ui-tui/src/__tests__/createSlashHandler.test.ts
+ M ui-tui/src/__tests__/rpc.test.ts
+ M ui-tui/src/__tests__/statusBarTicker.test.ts
+ M ui-tui/src/__tests__/subagentTree.test.ts
+ M ui-tui/src/__tests__/text.test.ts
+ M ui-tui/src/__tests__/tuiModules.test.ts
+ M ui-tui/src/app/createGatewayEventHandler.ts
+ M ui-tui/src/app/setupHandoff.ts
+ M ui-tui/src/app/slash/commands/core.ts
+ M ui-tui/src/app/slash/commands/debug.ts
+ M ui-tui/src/app/slash/commands/session.ts
+ M ui-tui/src/app/useMainApp.ts
+ M ui-tui/src/components/agentsOverlay.tsx
+ M ui-tui/src/components/appChrome.tsx
+ M ui-tui/src/components/appLayout.tsx
+ M ui-tui/src/components/modelPicker.tsx
+ M ui-tui/src/components/thinking.tsx
+ M ui-tui/src/content/setup.ts
+ M ui-tui/src/domain/messages.ts
+ M ui-tui/src/domain/tuiModules.ts
+ M ui-tui/src/gatewayTypes.ts
+ M ui-tui/src/lib/rpc.ts
+ M ui-tui/src/lib/subagentTree.ts
+ M ui-tui/src/lib/text.ts
+?? plugins/src/
+?? tests/plugins/src/
+?? tests/run_agent/test_personal_wake_context.py
+?? ui-tui/src/__tests__/tuiModuleHost.test.tsx
+?? ui-tui/src/__tests__/tuiModuleStore.test.ts
+?? ui-tui/src/app/tuiDoctor.ts
+?? ui-tui/src/app/tuiModuleStore.ts
+?? ui-tui/src/components/tuiModuleHost.tsx
