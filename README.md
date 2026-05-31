@@ -2,6 +2,29 @@
 
 Hermes 原生 TUI 中文化项目。当前先做 P0 主流程汉化、P1 高频入口汉化、P2 低频外壳补漏，不改 TUI 布局，不做独立发行包。
 
+## 2026-05-30 兼修结论
+
+当前 `E:\AI\hermes\hermes-agent` 为 Hermes Agent v0.15.1，本项目已重新适配当前 TUI 源码结构。
+
+- `verify.ps1` 已按当前分拆文件结构检查 `setup.ts`、`placeholders.ts`、`hotkeys.ts`、slash commands、model picker、agents overlay、MCP 刷新和 legacy text 清单。
+- 修复前 2026-05-29 复审曾失败 `Failed: 113`；这是历史漂移证据，不再代表当前状态。
+- 当前验证：`pwsh -NoProfile -ExecutionPolicy Bypass -File E:\AI\github\hermes-tui-zh\verify.ps1 -HermesRoot E:\AI\hermes\hermes-agent` 通过，`Failed: 0`。
+- 隔离长流程 TUI 验收：`tests\long-run-acceptance\2026-05-30-isolated-check\long-run-acceptance.md` 通过，覆盖 `/help`、`/mem`、`/browser status`、`/voice status`、本地 shell 失败中文标签、`/status`、窄窗口 resize。
+- 完整升级口：`E:\AI\github\_60-reviews\hermes-upgrade-gate\2026-05-30-002411\upgrade-gate.md`，所有 Hermes 周边项目 PASS。
+
+结论：当前 Hermes v0.15.1 下本机可用，自动化已到 B+；仍缺人工截图/肉眼验收，所以不是发布级 A。
+
+## 2026-05-29 复审历史
+
+当前 `E:\AI\hermes\hermes-agent` 已更新到 Hermes Agent v0.15.1，本项目和当前源码不再完整适配。
+
+- 旧版验收脚本还在查 `ui-tui/src/content/zh.ts`；当前 Hermes 已拆成 `content/setup.ts`、`placeholders.ts`、`hotkeys.ts` 等文件。
+- `verify.ps1` 已修正为不再因缺 `zh.ts` 直接崩溃，而是按当前文件结构继续审查。
+- 真实审查结果：`pwsh -ExecutionPolicy Bypass -File E:\AI\github\hermes-tui-zh\verify.ps1 -HermesRoot E:\AI\hermes\hermes-agent` 失败，`Failed: 113`。
+- 主要失败点是 TUI 前端可见英文回流，例如 setup、placeholder、hotkey、queue、slash help、model picker、overlay、fortune/charm/verb 等。
+
+结论：当时 Hermes v0.15.1 只保留了部分 TUI 中文显示能力，不能把本项目继续当成“P0/P1/P2 已完整落地”的状态。该问题已在 2026-05-30 兼修中收敛。
+
 ## 当前完成
 
 P0/P1/P2 已落到 Hermes 本体：
@@ -85,7 +108,9 @@ pwsh -ExecutionPolicy Bypass -File .\verify.ps1
 
 当前本机结果：
 
-- `pwsh -ExecutionPolicy Bypass -File .\verify.ps1`: 通过，0 失败。
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File E:\AI\github\hermes-tui-zh\verify.ps1 -HermesRoot E:\AI\hermes\hermes-agent`: 当前 v0.15.1 通过，`Failed: 0`。
+- 完整升级口：`E:\AI\github\_60-reviews\hermes-upgrade-gate\2026-05-30-002411\upgrade-gate.md`，所有项目 PASS。
+- 2026-05-29 的 `Failed: 113` 是修复前历史记录，证据在兼修包 `E:\AI\github\_50-issues\hermes-compat-repair\2026-05-29-233916-hermes-tui-zh\compat-repair.md`。
 - `npm test -- src/__tests__/createGatewayEventHandler.test.ts src/__tests__/text.test.ts src/__tests__/useInputHandlers.test.ts`: 75 通过。
 - `npm run type-check`: 通过。
 - `npm run build`: 通过，已更新 TUI dist。

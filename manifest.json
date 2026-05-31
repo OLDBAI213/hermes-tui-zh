@@ -7,14 +7,16 @@
     "path": "E:\\AI\\hermes\\hermes-agent",
     "ui": "ui-tui"
   },
-  "status": "p0-p1-p2-applied-locally",
+  "status": "verified_on_hermes_0.15.1",
   "profiles": [
     "p0",
     "p1",
     "p2"
   ],
   "modified_files": [
-    "ui-tui/src/content/zh.ts",
+    "ui-tui/src/content/setup.ts",
+    "ui-tui/src/content/placeholders.ts",
+    "ui-tui/src/content/hotkeys.ts",
     "ui-tui/src/domain/messages.ts",
     "ui-tui/src/lib/text.ts",
     "ui-tui/src/lib/subagentTree.ts",

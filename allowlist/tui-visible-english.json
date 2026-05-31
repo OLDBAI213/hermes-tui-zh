@@ -1,0 +1,57 @@
+{
+  "allowedExact": [
+    { "text": "API", "reason": "technical acronym" },
+    { "text": "API key", "reason": "technical term kept with Chinese context" },
+    { "text": "API Key", "reason": "technical term kept with Chinese context" },
+    { "text": "CDP", "reason": "Chrome DevTools Protocol acronym" },
+    { "text": "Ctrl+C", "reason": "keyboard shortcut" },
+    { "text": "Ctrl+D", "reason": "keyboard shortcut" },
+    { "text": "Ctrl+N", "reason": "keyboard shortcut" },
+    { "text": "Ctrl+R", "reason": "keyboard shortcut" },
+    { "text": "Esc", "reason": "keyboard key" },
+    { "text": "Enter", "reason": "keyboard key" },
+    { "text": "MCP", "reason": "protocol acronym" },
+    { "text": "TUI", "reason": "product surface acronym" },
+    { "text": "Hermes", "reason": "product name" },
+    { "text": "GitHub", "reason": "product name" },
+    { "text": "Chrome", "reason": "product name" },
+    { "text": "Chromium", "reason": "product name" },
+    { "text": "MiMo", "reason": "model name" },
+    { "text": "OpenAI", "reason": "provider name" },
+    { "text": "JSON", "reason": "data format" },
+    { "text": "VS Code", "reason": "product name" },
+    { "text": "stdout", "reason": "technical stream name" },
+    { "text": "stderr", "reason": "technical stream name" },
+    { "text": "stdin", "reason": "technical stream name" }
+  ],
+  "allowedPatterns": [
+    { "pattern": "^[A-Z][A-Z0-9_ -]{1,}$", "reason": "constant, acronym, or protocol label" },
+    { "pattern": "^[A-Za-z0-9_.:/\\\\-]+$", "reason": "identifier, model id, file path, URL fragment, or command token" },
+    { "pattern": "^/[A-Za-z0-9_.:/\\\\?=&<>\\[\\]{}|-]+( [A-Za-z0-9_.:/\\\\?=&<>\\[\\]{}|-]+)*$", "reason": "slash command usage" },
+    { "pattern": "^https?://", "reason": "URL" },
+    { "pattern": "^<[^>]+>$", "reason": "argument placeholder" },
+    { "pattern": "^\\{[A-Za-z_][A-Za-z0-9_]*\\}$", "reason": "format placeholder" },
+    { "pattern": "^#[A-Za-z0-9_-]+$", "reason": "CSS color or fragment identifier" },
+    { "pattern": "^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+$", "reason": "config key or dotted identifier" },
+    { "pattern": "^[A-Za-z]+\\([^)]+\\)$", "reason": "debug/tool notation" },
+    { "pattern": "^\\u001b\\[\\d+(;\\d+)*u$", "reason": "terminal keyboard escape sequence" },
+    { "pattern": "^p\\d+$", "reason": "page shorthand" },
+    { "pattern": "^d\\d+/\\d+$", "reason": "delegation cap shorthand" }
+  ],
+  "forbiddenPatterns": [
+    { "pattern": "Invalid API Key", "reason": "auth error must be normalized to Chinese" },
+    { "pattern": "Please provide valid API Key", "reason": "auth error must be normalized to Chinese" },
+    { "pattern": "Gateway shutting down", "reason": "lifecycle warning must be Chinese" },
+    { "pattern": "setup required", "reason": "setup state must be Chinese" },
+    { "pattern": "gateway exited", "reason": "gateway lifecycle must be Chinese" },
+    { "pattern": "conversation saved to", "reason": "save result must be Chinese" },
+    { "pattern": "no active session", "reason": "session state must be Chinese" },
+    { "pattern": "usage:", "reason": "usage hints must use Chinese prefix" }
+  ],
+  "ignoredFiles": [
+    "src/__tests__/**",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.d.ts"
+  ]
+}
