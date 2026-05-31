@@ -1,0 +1,10 @@
+# Smoke test outputs (generated artifacts)
+tests/2026-*.txt
+tests/debug-*.txt
+tests/debug-*.ndjson
+tests/long-run-acceptance/
+tests/visible-text-report.md
+
+# Python bytecode
+scripts/__pycache__/
+*.pyc
